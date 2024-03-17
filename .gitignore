@@ -1,4 +1,9 @@
 zookeeper-data
-postgres/postgres_data
 kafka
 debezium-connect-data
+spark-cluster/id_rsa.pub
+spark-cluster/id_rsa
+postgres/postgres_data/*
+!postgres/postgres_data/postgresql.conf
+spark-cluster/spark-jobs/data
+spark-cluster/spark-jobs/checkpoint

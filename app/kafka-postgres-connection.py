@@ -6,7 +6,7 @@ import os
 import ipaddress
 
 print("::::Start Sleepping")
-time.sleep(15)
+time.sleep(30)
 print("::::Stop Sleepping")
 
 url = "http://postgres-connector:8083/connectors/"

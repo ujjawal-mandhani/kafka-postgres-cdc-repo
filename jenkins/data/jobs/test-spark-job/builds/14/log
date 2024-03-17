@@ -1,0 +1,395 @@
+Started by user [8mha:////4ILoLirgbRlErgoytKgKOVb1v0u12+3FQDRRO1q9G1kzAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyBEgZe/dLi1CL90qysxPLEHADm1DSywgAAAA==[0mUjjawal Mandhani
+Running as SYSTEM
+Building in workspace /var/jenkins_home/jobs/test-spark-job/workspace
+[workspace] $ /bin/bash /tmp/jenkins12793245046151589046.sh
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Failed to add the host to the list of known hosts (/var/jenkins_home/.ssh/known_hosts).
+total 12
+drwxrwxr-x 2 1000 1000 4096 Mar 17 11:05 .
+drwxrwxr-x 5 1000 1000 4096 Mar 17 11:26 ..
+-rw-rw-r-- 1 1000 1000  708 Mar 17 11:09 spark_job.py
+:: loading settings :: url = jar:file:/usr/local/share/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-5734e495-d1a7-4b21-9358-a02e6d02fa56;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 in central
+	found org.apache.kafka#kafka-clients;3.4.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.3 in central
+	found org.slf4j#slf4j-api;2.0.7 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+:: resolution report :: resolve 2897ms :: artifacts dl 93ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.1 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.7 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   11  |   0   |   0   |   0   ||   11  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-5734e495-d1a7-4b21-9358-a02e6d02fa56
+	confs: [default]
+	0 artifacts copied, 11 already retrieved (0kB/12ms)
+24/03/17 11:29:25 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/03/17 11:29:28 INFO SparkContext: Running Spark version 3.5.1
+24/03/17 11:29:28 INFO SparkContext: OS info Linux, 6.5.0-25-generic, amd64
+24/03/17 11:29:28 INFO SparkContext: Java version 18.0.2.1
+24/03/17 11:29:28 INFO ResourceUtils: ==============================================================
+24/03/17 11:29:28 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/03/17 11:29:28 INFO ResourceUtils: ==============================================================
+24/03/17 11:29:28 INFO SparkContext: Submitted application: read_stream
+24/03/17 11:29:28 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/03/17 11:29:28 INFO ResourceProfile: Limiting resource is cpu
+24/03/17 11:29:28 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/03/17 11:29:28 INFO SecurityManager: Changing view acls to: root
+24/03/17 11:29:28 INFO SecurityManager: Changing modify acls to: root
+24/03/17 11:29:28 INFO SecurityManager: Changing view acls groups to: 
+24/03/17 11:29:28 INFO SecurityManager: Changing modify acls groups to: 
+24/03/17 11:29:28 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root; groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY
+24/03/17 11:29:29 INFO Utils: Successfully started service 'sparkDriver' on port 35497.
+24/03/17 11:29:29 INFO SparkEnv: Registering MapOutputTracker
+24/03/17 11:29:29 INFO SparkEnv: Registering BlockManagerMaster
+24/03/17 11:29:29 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/03/17 11:29:29 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/03/17 11:29:29 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/03/17 11:29:29 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-ace15852-2e60-47b8-a556-a06726291e5f
+24/03/17 11:29:29 INFO MemoryStore: MemoryStore started with capacity 413.9 MiB
+24/03/17 11:29:29 INFO SparkEnv: Registering OutputCommitCoordinator
+24/03/17 11:29:30 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/03/17 11:29:30 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/03/17 11:29:30 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar at spark://7492e9a0a93b:35497/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar with timestamp 1710674968305
+24/03/17 11:29:30 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar at spark://7492e9a0a93b:35497/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar with timestamp 1710674968305
+24/03/17 11:29:30 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at spark://7492e9a0a93b:35497/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1710674968305
+24/03/17 11:29:30 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://7492e9a0a93b:35497/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1710674968305
+24/03/17 11:29:30 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://7492e9a0a93b:35497/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1710674968305
+24/03/17 11:29:30 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at spark://7492e9a0a93b:35497/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1710674968305
+24/03/17 11:29:30 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://7492e9a0a93b:35497/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1710674968305
+24/03/17 11:29:30 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar at spark://7492e9a0a93b:35497/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1710674968305
+24/03/17 11:29:30 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at spark://7492e9a0a93b:35497/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1710674968305
+24/03/17 11:29:30 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at spark://7492e9a0a93b:35497/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1710674968305
+24/03/17 11:29:30 INFO SparkContext: Added JAR file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://7492e9a0a93b:35497/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1710674968305
+24/03/17 11:29:30 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar at spark://7492e9a0a93b:35497/files/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar with timestamp 1710674968305
+24/03/17 11:29:30 INFO Utils: Copying /root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar to /tmp/spark-8fa64792-7472-4d05-a8ec-89807765aacb/userFiles-26fed9c0-2f42-45ba-9fe2-8e1222deced7/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.1.jar
+24/03/17 11:29:30 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar at spark://7492e9a0a93b:35497/files/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar with timestamp 1710674968305
+24/03/17 11:29:30 INFO Utils: Copying /root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar to /tmp/spark-8fa64792-7472-4d05-a8ec-89807765aacb/userFiles-26fed9c0-2f42-45ba-9fe2-8e1222deced7/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.1.jar
+24/03/17 11:29:30 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at spark://7492e9a0a93b:35497/files/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1710674968305
+24/03/17 11:29:30 INFO Utils: Copying /root/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar to /tmp/spark-8fa64792-7472-4d05-a8ec-89807765aacb/userFiles-26fed9c0-2f42-45ba-9fe2-8e1222deced7/org.apache.kafka_kafka-clients-3.4.1.jar
+24/03/17 11:29:30 INFO SparkContext: Added file file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://7492e9a0a93b:35497/files/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1710674968305
+24/03/17 11:29:30 INFO Utils: Copying /root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-8fa64792-7472-4d05-a8ec-89807765aacb/userFiles-26fed9c0-2f42-45ba-9fe2-8e1222deced7/com.google.code.findbugs_jsr305-3.0.0.jar
+24/03/17 11:29:30 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://7492e9a0a93b:35497/files/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1710674968305
+24/03/17 11:29:30 INFO Utils: Copying /root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-8fa64792-7472-4d05-a8ec-89807765aacb/userFiles-26fed9c0-2f42-45ba-9fe2-8e1222deced7/org.apache.commons_commons-pool2-2.11.1.jar
+24/03/17 11:29:30 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at spark://7492e9a0a93b:35497/files/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1710674968305
+24/03/17 11:29:30 INFO Utils: Copying /root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-8fa64792-7472-4d05-a8ec-89807765aacb/userFiles-26fed9c0-2f42-45ba-9fe2-8e1222deced7/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+24/03/17 11:29:31 INFO SparkContext: Added file file:///root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://7492e9a0a93b:35497/files/org.lz4_lz4-java-1.8.0.jar with timestamp 1710674968305
+24/03/17 11:29:31 INFO Utils: Copying /root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-8fa64792-7472-4d05-a8ec-89807765aacb/userFiles-26fed9c0-2f42-45ba-9fe2-8e1222deced7/org.lz4_lz4-java-1.8.0.jar
+24/03/17 11:29:31 INFO SparkContext: Added file file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar at spark://7492e9a0a93b:35497/files/org.xerial.snappy_snappy-java-1.1.10.3.jar with timestamp 1710674968305
+24/03/17 11:29:31 INFO Utils: Copying /root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.3.jar to /tmp/spark-8fa64792-7472-4d05-a8ec-89807765aacb/userFiles-26fed9c0-2f42-45ba-9fe2-8e1222deced7/org.xerial.snappy_snappy-java-1.1.10.3.jar
+24/03/17 11:29:31 INFO SparkContext: Added file file:///root/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at spark://7492e9a0a93b:35497/files/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1710674968305
+24/03/17 11:29:31 INFO Utils: Copying /root/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar to /tmp/spark-8fa64792-7472-4d05-a8ec-89807765aacb/userFiles-26fed9c0-2f42-45ba-9fe2-8e1222deced7/org.slf4j_slf4j-api-2.0.7.jar
+24/03/17 11:29:31 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at spark://7492e9a0a93b:35497/files/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1710674968305
+24/03/17 11:29:31 INFO Utils: Copying /root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-8fa64792-7472-4d05-a8ec-89807765aacb/userFiles-26fed9c0-2f42-45ba-9fe2-8e1222deced7/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+24/03/17 11:29:31 INFO SparkContext: Added file file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://7492e9a0a93b:35497/files/commons-logging_commons-logging-1.1.3.jar with timestamp 1710674968305
+24/03/17 11:29:31 INFO Utils: Copying /root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-8fa64792-7472-4d05-a8ec-89807765aacb/userFiles-26fed9c0-2f42-45ba-9fe2-8e1222deced7/commons-logging_commons-logging-1.1.3.jar
+24/03/17 11:29:31 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+24/03/17 11:29:31 INFO TransportClientFactory: Successfully created connection to spark-master/172.31.0.11:7077 after 179 ms (0 ms spent in bootstraps)
+24/03/17 11:29:31 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20240317112931-0001
+24/03/17 11:29:31 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20240317112931-0001/0 on worker-20240317111822-172.31.0.11-41527 (172.31.0.11:41527) with 1 core(s)
+24/03/17 11:29:32 INFO StandaloneSchedulerBackend: Granted executor ID app-20240317112931-0001/0 on hostPort 172.31.0.11:41527 with 1 core(s), 1024.0 MiB RAM
+24/03/17 11:29:32 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20240317112931-0001/1 on worker-20240317111816-172.31.0.7-34669 (172.31.0.7:34669) with 1 core(s)
+24/03/17 11:29:32 INFO StandaloneSchedulerBackend: Granted executor ID app-20240317112931-0001/1 on hostPort 172.31.0.7:34669 with 1 core(s), 1024.0 MiB RAM
+24/03/17 11:29:32 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20240317112931-0001/2 on worker-20240317111816-172.31.0.6-40373 (172.31.0.6:40373) with 1 core(s)
+24/03/17 11:29:32 INFO StandaloneSchedulerBackend: Granted executor ID app-20240317112931-0001/2 on hostPort 172.31.0.6:40373 with 1 core(s), 1024.0 MiB RAM
+24/03/17 11:29:32 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35331.
+24/03/17 11:29:32 INFO NettyBlockTransferService: Server created on 7492e9a0a93b:35331
+24/03/17 11:29:32 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/03/17 11:29:32 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 7492e9a0a93b, 35331, None)
+24/03/17 11:29:32 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20240317112931-0001/1 is now RUNNING
+24/03/17 11:29:32 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20240317112931-0001/2 is now RUNNING
+24/03/17 11:29:32 INFO BlockManagerMasterEndpoint: Registering block manager 7492e9a0a93b:35331 with 413.9 MiB RAM, BlockManagerId(driver, 7492e9a0a93b, 35331, None)
+24/03/17 11:29:32 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20240317112931-0001/0 is now RUNNING
+24/03/17 11:29:32 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 7492e9a0a93b, 35331, None)
+24/03/17 11:29:32 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 7492e9a0a93b, 35331, None)
+24/03/17 11:29:34 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+24/03/17 11:29:35 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+24/03/17 11:29:35 INFO SharedState: Warehouse path is 'file:/home/spark-jobs/spark-warehouse'.
+24/03/17 11:29:42 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.31.0.7:49356) with ID 1,  ResourceProfileId 0
+24/03/17 11:29:43 INFO BlockManagerMasterEndpoint: Registering block manager 172.31.0.7:45513 with 413.9 MiB RAM, BlockManagerId(1, 172.31.0.7, 45513, None)
+24/03/17 11:29:43 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.31.0.6:56882) with ID 2,  ResourceProfileId 0
+24/03/17 11:29:43 INFO BlockManagerMasterEndpoint: Registering block manager 172.31.0.6:41035 with 413.9 MiB RAM, BlockManagerId(2, 172.31.0.6, 41035, None)
+24/03/17 11:29:55 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+24/03/17 11:29:55 INFO ResolveWriteToStream: Checkpoint root /home/checkpoint resolved to file:/home/checkpoint.
+24/03/17 11:29:55 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+24/03/17 11:29:57 INFO MicroBatchExecution: Starting [id = 44527900-dbd7-49c5-afac-c55fe7f46fa4, runId = 71f86ae0-b889-4635-8fa4-f7747927493e]. Use file:/home/checkpoint to store the query checkpoint.
+24/03/17 11:29:57 INFO MicroBatchExecution: Reading table [org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaTable@19039aa5] from DataSourceV2 named 'kafka' [org.apache.spark.sql.kafka010.KafkaSourceProvider@5e023569]
+24/03/17 11:29:58 INFO OffsetSeqLog: BatchIds found from listing: 0, 1
+24/03/17 11:29:58 INFO OffsetSeqLog: Getting latest batch 1
+24/03/17 11:29:58 INFO OffsetSeqLog: BatchIds found from listing: 0, 1
+24/03/17 11:29:58 INFO OffsetSeqLog: Getting latest batch 1
+24/03/17 11:29:58 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.31.0.11:46578) with ID 0,  ResourceProfileId 0
+24/03/17 11:29:58 INFO CommitLog: BatchIds found from listing: 0, 1
+24/03/17 11:29:58 INFO CommitLog: Getting latest batch 1
+24/03/17 11:29:59 INFO MicroBatchExecution: Resuming at batch 2 with committed offsets {KafkaV2[Subscribe[my_prefix.public.customers]]: {"my_prefix.public.customers":{"0":2}}} and available offsets {KafkaV2[Subscribe[my_prefix.public.customers]]: {"my_prefix.public.customers":{"0":2}}}
+24/03/17 11:29:59 INFO MicroBatchExecution: Stream started from {KafkaV2[Subscribe[my_prefix.public.customers]]: {"my_prefix.public.customers":{"0":2}}}
+24/03/17 11:29:59 INFO AdminClientConfig: AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [kafka:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+24/03/17 11:29:59 INFO BlockManagerMasterEndpoint: Registering block manager 172.31.0.11:39069 with 413.9 MiB RAM, BlockManagerId(0, 172.31.0.11, 39069, None)
+24/03/17 11:30:01 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+24/03/17 11:30:01 INFO AppInfoParser: Kafka version: 3.4.1
+24/03/17 11:30:01 INFO AppInfoParser: Kafka commitId: 8a516edc2755df89
+24/03/17 11:30:01 INFO AppInfoParser: Kafka startTimeMs: 1710675001584
+24/03/17 11:30:17 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:30:27 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:30:37 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:30:47 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:30:57 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:31:07 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:31:17 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:31:27 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:31:37 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:31:47 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:31:57 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:32:07 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:32:17 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:32:27 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:32:35 INFO CheckpointFileManager: Writing atomically to file:/home/checkpoint/offsets/2 using temp file file:/home/checkpoint/offsets/.2.f539e423-d47a-4cfa-8a23-be07f350f6a7.tmp
+24/03/17 11:32:35 INFO CheckpointFileManager: Renamed temp file file:/home/checkpoint/offsets/.2.f539e423-d47a-4cfa-8a23-be07f350f6a7.tmp to file:/home/checkpoint/offsets/2
+24/03/17 11:32:35 INFO MicroBatchExecution: Committed offsets for batch 2. Metadata OffsetSeqMetadata(0,1710675155441,Map(spark.sql.streaming.stateStore.providerClass -> org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider, spark.sql.streaming.join.stateFormatVersion -> 2, spark.sql.streaming.stateStore.compression.codec -> lz4, spark.sql.streaming.stateStore.rocksdb.formatVersion -> 5, spark.sql.streaming.statefulOperator.useStrictDistribution -> true, spark.sql.streaming.flatMapGroupsWithState.stateFormatVersion -> 2, spark.sql.streaming.multipleWatermarkPolicy -> min, spark.sql.streaming.aggregation.stateFormatVersion -> 2, spark.sql.shuffle.partitions -> 200))
+24/03/17 11:32:36 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/03/17 11:32:36 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/03/17 11:32:36 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/03/17 11:32:36 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+24/03/17 11:32:37 INFO FileStreamSinkLog: BatchIds found from listing: 0, 1
+24/03/17 11:32:37 INFO ParquetUtils: Using default output committer for Parquet: org.apache.parquet.hadoop.ParquetOutputCommitter
+24/03/17 11:32:38 INFO CodeGenerator: Code generated in 514.416469 ms
+24/03/17 11:32:39 INFO SparkContext: Starting job: start at NativeMethodAccessorImpl.java:0
+24/03/17 11:32:39 INFO DAGScheduler: Got job 0 (start at NativeMethodAccessorImpl.java:0) with 1 output partitions
+24/03/17 11:32:39 INFO DAGScheduler: Final stage: ResultStage 0 (start at NativeMethodAccessorImpl.java:0)
+24/03/17 11:32:39 INFO DAGScheduler: Parents of final stage: List()
+24/03/17 11:32:39 INFO DAGScheduler: Missing parents: List()
+24/03/17 11:32:39 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[2] at start at NativeMethodAccessorImpl.java:0), which has no missing parents
+24/03/17 11:32:39 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 221.1 KiB, free 413.7 MiB)
+24/03/17 11:32:39 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 77.8 KiB, free 413.6 MiB)
+24/03/17 11:32:39 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 7492e9a0a93b:35331 (size: 77.8 KiB, free: 413.8 MiB)
+24/03/17 11:32:39 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1585
+24/03/17 11:32:39 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at start at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+24/03/17 11:32:39 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+24/03/17 11:32:39 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (172.31.0.6, executor 2, partition 0, PROCESS_LOCAL, 10746 bytes) 
+24/03/17 11:32:40 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 172.31.0.6:41035 (size: 77.8 KiB, free: 413.8 MiB)
+24/03/17 11:32:48 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 8252 ms on 172.31.0.6 (executor 2) (1/1)
+24/03/17 11:32:48 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+24/03/17 11:32:48 INFO DAGScheduler: ResultStage 0 (start at NativeMethodAccessorImpl.java:0) finished in 8.963 s
+24/03/17 11:32:48 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+24/03/17 11:32:48 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+24/03/17 11:32:48 INFO DAGScheduler: Job 0 finished: start at NativeMethodAccessorImpl.java:0, took 9.158286 s
+24/03/17 11:32:48 INFO FileFormatWriter: Start to commit write Job 80835a27-34aa-43d2-af75-6f3f6caffed0.
+24/03/17 11:32:48 INFO FileStreamSinkLog: Set the compact interval to 10 [defaultCompactInterval: 10]
+24/03/17 11:32:48 INFO CheckpointFileManager: Writing atomically to /home/data/_spark_metadata/2 using temp file /home/data/_spark_metadata/.2.cc5d8f3f-3710-4d22-a87b-951e16772803.tmp
+24/03/17 11:32:48 INFO CheckpointFileManager: Renamed temp file /home/data/_spark_metadata/.2.cc5d8f3f-3710-4d22-a87b-951e16772803.tmp to /home/data/_spark_metadata/2
+24/03/17 11:32:48 INFO ManifestFileCommitProtocol: Committed batch 2
+24/03/17 11:32:48 INFO FileFormatWriter: Write Job 80835a27-34aa-43d2-af75-6f3f6caffed0 committed. Elapsed time: 114 ms.
+24/03/17 11:32:48 INFO FileFormatWriter: Finished processing stats for write job 80835a27-34aa-43d2-af75-6f3f6caffed0.
+24/03/17 11:32:48 INFO CheckpointFileManager: Writing atomically to file:/home/checkpoint/commits/2 using temp file file:/home/checkpoint/commits/.2.5a7d1926-c7df-41d2-bfcf-b94dfead084a.tmp
+24/03/17 11:32:48 INFO CheckpointFileManager: Renamed temp file file:/home/checkpoint/commits/.2.5a7d1926-c7df-41d2-bfcf-b94dfead084a.tmp to file:/home/checkpoint/commits/2
+24/03/17 11:32:48 INFO MicroBatchExecution: Streaming query made progress: {
+  "id" : "44527900-dbd7-49c5-afac-c55fe7f46fa4",
+  "runId" : "71f86ae0-b889-4635-8fa4-f7747927493e",
+  "name" : null,
+  "timestamp" : "2024-03-17T11:32:35.439Z",
+  "batchId" : 2,
+  "numInputRows" : 1,
+  "inputRowsPerSecond" : 83.33333333333333,
+  "processedRowsPerSecond" : 0.0765814060346148,
+  "durationMs" : {
+    "addBatch" : 11521,
+    "commitOffsets" : 190,
+    "getBatch" : 1,
+    "latestOffset" : 2,
+    "queryPlanning" : 1211,
+    "triggerExecution" : 13058,
+    "walCommit" : 64
+  },
+  "stateOperators" : [ ],
+  "sources" : [ {
+    "description" : "KafkaV2[Subscribe[my_prefix.public.customers]]",
+    "startOffset" : {
+      "my_prefix.public.customers" : {
+        "0" : 2
+      }
+    },
+    "endOffset" : {
+      "my_prefix.public.customers" : {
+        "0" : 3
+      }
+    },
+    "latestOffset" : {
+      "my_prefix.public.customers" : {
+        "0" : 3
+      }
+    },
+    "numInputRows" : 1,
+    "inputRowsPerSecond" : 83.33333333333333,
+    "processedRowsPerSecond" : 0.0765814060346148,
+    "metrics" : {
+      "avgOffsetsBehindLatest" : "0.0",
+      "maxOffsetsBehindLatest" : "0",
+      "minOffsetsBehindLatest" : "0"
+    }
+  } ],
+  "sink" : {
+    "description" : "FileSink[/home/data]",
+    "numOutputRows" : -1
+  }
+}
+24/03/17 11:32:52 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 7492e9a0a93b:35331 in memory (size: 77.8 KiB, free: 413.9 MiB)
+24/03/17 11:32:52 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 172.31.0.6:41035 in memory (size: 77.8 KiB, free: 413.9 MiB)
+24/03/17 11:32:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:33:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:33:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:33:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:33:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:33:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:33:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:34:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:34:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:34:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:34:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:34:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:34:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:35:06 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+24/03/17 11:35:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:35:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:35:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:35:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:35:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:35:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:36:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:36:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:36:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:36:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:36:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:36:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:37:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:37:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:37:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:37:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:37:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:37:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:38:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:38:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:38:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:38:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:38:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:38:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:39:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:39:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:39:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:39:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:39:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:39:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:40:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:40:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:40:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:40:38 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:40:48 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:40:58 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:41:08 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:41:18 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+24/03/17 11:41:28 INFO MicroBatchExecution: Streaming query has been idle and waiting for new data more than 10000 ms.
+Build was aborted
+FATAL: Jenkins.instance is missing. Read the documentation of Jenkins.getInstanceOrNull to see what you are doing wrong.
+java.lang.IllegalStateException: Jenkins.instance is missing. Read the documentation of Jenkins.getInstanceOrNull to see what you are doing wrong.
+	at jenkins.model.Jenkins.get(Jenkins.java:824)
+	at hudson.tasks.BuildTrigger.execute(BuildTrigger.java:274)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.cleanUp(AbstractBuild.java:728)
+	at hudson.model.Build$BuildExecution.cleanUp(Build.java:194)
+	at hudson.model.Run.execute(Run.java:1936)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:44)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:442)
+Finished: ABORTED
